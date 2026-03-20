@@ -1,9 +1,9 @@
 ---
-title: Teste Técnico — Desenvolvedor Flutter Pleno
+title: Teste Técnico — Desenvolvedor Flutter 
 date: 2026-03-20
 ---
 
-# Teste Técnico — Desenvolvedor Flutter Pleno
+# Teste Técnico — Desenvolvedor Flutter 
 
 ## Sumário
 
