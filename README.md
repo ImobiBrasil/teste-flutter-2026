@@ -9,6 +9,7 @@ date: 2026-03-20
 
 - [Sobre o Teste](#sobre-o-teste)
 - [O Desafio](#o-desafio)
+- [Identidade Visual](#identidade-visual)
 - [Requisitos Funcionais](#requisitos-funcionais)
 - [Requisitos Técnicos](#requisitos-técnicos)
 - [API Simulada](#api-simulada)
@@ -34,6 +35,31 @@ O app deve consumir uma API REST (fornecida abaixo como JSON mockado), exibir um
 
 ---
 
+## Identidade Visual
+
+O app deve seguir a identidade visual da ImobiBrasil. Use os recursos abaixo:
+
+**Logotipo completo (para splash screen ou AppBar):**
+`https://imobibrasil.com.br/imagens/logotipo/svg/logo-original-imobibrasil.svg`
+
+**Ícone (para favicon, ícone do app ou elementos menores):**
+`https://imobibrasil.com.br/imagens/logotipo/svg/icone-original-imobibrasil.svg`
+
+**Paleta de cores:**
+
+| Uso | Cor | Hex |
+|---|---|---|
+| Primária (botões, AppBar, destaques) | Verde ImobiBrasil | `#1B7A43` |
+| Primária escura (status bar, hover) | Verde escuro | `#145C32` |
+| Secundária (badges, links, ações secundárias) | Azul | `#1A73E8` |
+| Fundo | Cinza claro | `#F5F5F5` |
+| Texto principal | Cinza escuro | `#212121` |
+| Texto secundário | Cinza médio | `#757575` |
+
+Não é necessário seguir a paleta ao pixel — o objetivo é que o app tenha a cara da ImobiBrasil.
+
+---
+
 ## Requisitos Funcionais
 
 ### Tela 1 — Lista de Imóveis
@@ -51,10 +77,20 @@ O app deve consumir uma API REST (fornecida abaixo como JSON mockado), exibir um
 - Características: quartos, banheiros, vagas, área (m²)
 - Botão "Entrar em Contato" (pode apenas exibir um SnackBar ou dialog — não precisa funcionar de verdade)
 
+### Tela 3 — Edição do Imóvel
+
+- Acessível a partir da tela de detalhe (botão "Editar" ou ícone de lápis)
+- Formulário com os campos editáveis: título, descrição, tipo (dropdown: venda/aluguel), preço, cidade, bairro, quartos, banheiros, vagas, área (m²)
+- Validação básica: campos obrigatórios não podem ficar vazios, preço e área devem ser numéricos e maiores que zero
+- Ao salvar, atualizar o estado local do app (a alteração deve refletir na lista e no detalhe)
+- Feedback visual ao salvar (SnackBar de confirmação)
+- Botão de cancelar que descarta as alterações e volta ao detalhe
+
 ### Navegação
 
 - Transição da lista para o detalhe ao tocar no card
-- Botão de voltar no detalhe
+- Transição do detalhe para a edição ao tocar em "Editar"
+- Botão de voltar no detalhe e na edição
 
 ---
 
@@ -192,14 +228,14 @@ Não são obrigatórios, mas contam pontos:
 
 ## Entrega
 
-1. Criar um repositório **publico** no GitHub
+1. Criar um repositório **Publico** no GitHub
 2. Incluir um `README.md` com:
    - Instruções de como rodar o projeto
    - Decisões técnicas tomadas (gerenciamento de estado, arquitetura, libs usadas)
    - O que você faria diferente com mais tempo
-
+3. Adicionar o(s) avaliador(es) como colaborador(es) do repositório
 
 
 ---
 
-Boa sorte. 
+Boa sorte. Estamos curiosos pra ver o que você vai construir.
