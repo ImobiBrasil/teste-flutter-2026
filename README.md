@@ -1,9 +1,9 @@
 ---
-title: Teste Técnico — Desenvolvedor Flutter 
+title: Teste Técnico — Desenvolvedor Flutter Pleno
 date: 2026-03-20
 ---
 
-# Teste Técnico — Desenvolvedor Flutter 
+# Teste Técnico — Desenvolvedor Flutter Pleno
 
 ## Sumário
 
@@ -201,15 +201,34 @@ Usar o JSON abaixo como fonte de dados. Pode ser servido localmente, lido de um 
 
 ---
 
-## Diferenciais
+## Diferenciais (Extras)
 
-Não são obrigatórios, mas contam pontos:
+Não são obrigatórios, mas fazem diferença real na avaliação. Candidatos que entregam extras demonstram autonomia e vontade de ir além — qualidades que valorizamos na ImobiBrasil.
 
-- **Testes:** pelo menos um teste unitário (ex: lógica de filtro) e/ou um widget test
+### Login Simples
+
+- Tela de login com e-mail e senha (validação local, sem backend real)
+- Credenciais fixas para teste: `corretor@imobibrasil.com.br` / `imobi2026`
+- Após login, redirecionar para a lista de imóveis
+- Exibir nome do usuário logado na AppBar ou drawer
+- Botão de logout que volta à tela de login
+- Proteger as rotas: sem login, não acessa lista/detalhe/edição
+
+### Cadastro de Novo Imóvel
+
+- Botão "Adicionar Imóvel" na tela de lista (FAB ou botão na AppBar)
+- Formulário com os mesmos campos da edição: título, descrição, tipo, preço, cidade, bairro, quartos, banheiros, vagas, área
+- Gerar um `id` incremental automaticamente
+- Usar uma foto placeholder (ex: `https://picsum.photos/seed/novo/600/400`)
+- Validação dos campos obrigatórios
+- Ao salvar, o novo imóvel deve aparecer na lista imediatamente
+
+### Outros Extras
+
+
 - **Firebase:** integração simples com Firebase Analytics ou Crashlytics (pode ser só a inicialização)
-- **CI:** configuração básica de GitHub Actions (lint + build)
 - **Animações:** hero animation na transição lista → detalhe, ou shimmer no loading
-- **Responsividade:** adaptação para tablet ou web
+- **Persistência local:** salvar dados com SharedPreferences, Hive ou SQLite para que alterações sobrevivam ao restart do app
 
 ---
 
@@ -219,21 +238,21 @@ Não são obrigatórios, mas contam pontos:
 |---|---|---|
 | Arquitetura e organização | Alto | Separação de camadas, estrutura de pastas, injeção de dependências |
 | Qualidade do código | Alto | Nomes claros, funções pequenas, sem código morto, DRY |
-| UI e UX | Médio | Fidelidade ao que foi pedido, estados de loading/erro/vazio, formatação de valores |
-| Integração com dados | Médio | Consumo do JSON, parsing, tratamento de erros |
-| Extras e diferenciais | Baixo | Testes, CI, Firebase, animações |
+| UI e UX | Médio | Fidelidade visual à marca, estados de loading/erro/vazio, formatação de valores |
+| Integração com dados | Médio | Consumo do JSON, parsing, tratamento de erros, mutação de estado |
+| Extras e diferenciais | Médio | Login, cadastro de imóvel, testes, CI, Firebase, animações, persistência |
 | README e documentação | Baixo | Decisões técnicas explicadas, instruções de setup claras |
 
 ---
 
 ## Entrega
 
-1. Criar um repositório **Publico** no GitHub
+1. Criar um repositório **publico** no GitHub
 2. Incluir um `README.md` com:
    - Instruções de como rodar o projeto
    - Decisões técnicas tomadas (gerenciamento de estado, arquitetura, libs usadas)
    - O que você faria diferente com mais tempo
-3. Adicionar o(s) avaliador(es) como colaborador(es) do repositório
+3. Enviar o link do repositório no formulário indicado
 
 
 ---
